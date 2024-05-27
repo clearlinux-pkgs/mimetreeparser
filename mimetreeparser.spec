@@ -6,10 +6,10 @@
 # autospec commit: 5905be9
 #
 Name     : mimetreeparser
-Version  : 24.02.2
-Release  : 3
-URL      : https://invent.kde.org/pim/mimetreeparser/-/archive/v24.02.2/mimetreeparser-v24.02.2.tar.gz
-Source0  : https://invent.kde.org/pim/mimetreeparser/-/archive/v24.02.2/mimetreeparser-v24.02.2.tar.gz
+Version  : 24.05.0
+Release  : 4
+URL      : https://invent.kde.org/pim/mimetreeparser/-/archive/v24.05.0/mimetreeparser-v24.05.0.tar.gz
+Source0  : https://invent.kde.org/pim/mimetreeparser/-/archive/v24.05.0/mimetreeparser-v24.05.0.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-2-Clause BSD-3-Clause CC0-1.0 FSFULLR GPL-2.0 GPL-3.0 LGPL-2.0 LGPL-2.1 LGPL-3.0
@@ -84,15 +84,15 @@ locales components for the mimetreeparser package.
 
 
 %prep
-%setup -q -n mimetreeparser-v24.02.2
-cd %{_builddir}/mimetreeparser-v24.02.2
+%setup -q -n mimetreeparser-v24.05.0
+cd %{_builddir}/mimetreeparser-v24.05.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1713116146
+export SOURCE_DATE_EPOCH=1716824457
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -129,7 +129,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1713116146
+export SOURCE_DATE_EPOCH=1716824457
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/mimetreeparser
 cp %{_builddir}/mimetreeparser-v%{version}/LICENSES/BSD-2-Clause.txt %{buildroot}/usr/share/package-licenses/mimetreeparser/07c1ab270255cf247438e2358ff0c18835b6a6ce || :
@@ -158,7 +158,7 @@ popd
 
 %files data
 %defattr(-,root,root,-)
-/usr/share/qlogging-categories6/mimetreeparser2.categories
+/usr/share/qlogging-categories6/mimetreeparser.categories
 
 %files dev
 %defattr(-,root,root,-)
@@ -204,9 +204,9 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKPim6MimeTreeParserCore.so.6
-/usr/lib64/libKPim6MimeTreeParserCore.so.6.0.2
+/usr/lib64/libKPim6MimeTreeParserCore.so.6.1.0
 /usr/lib64/libKPim6MimeTreeParserWidgets.so.6
-/usr/lib64/libKPim6MimeTreeParserWidgets.so.6.0.2
+/usr/lib64/libKPim6MimeTreeParserWidgets.so.6.1.0
 /usr/lib64/qt6/qml/org/kde/pim/mimetreeparser/MailViewer.qml
 /usr/lib64/qt6/qml/org/kde/pim/mimetreeparser/kde-qmlmodule.version
 /usr/lib64/qt6/qml/org/kde/pim/mimetreeparser/libmimetreeparser_plugin.so
